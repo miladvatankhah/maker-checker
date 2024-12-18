@@ -1,0 +1,8 @@
+server:
+  port: 3000
+  host: "localhost"
+
+rabbit:
+  heartbeat: 20
+  reconnectDelay: 10
+  MaxRetries: 20

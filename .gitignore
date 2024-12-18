@@ -1,0 +1,6 @@
+.idea
+.vscode
+.env.prod
+.env.dev
+./configs/dev.yml
+./configs/prod.yml
