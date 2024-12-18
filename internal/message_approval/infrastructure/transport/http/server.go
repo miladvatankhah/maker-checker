@@ -2,7 +2,7 @@ package http
 
 import (
 	"fmt"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/presentation/http/v1"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/presentation/http/v1"
 	"net/http"
 )
 

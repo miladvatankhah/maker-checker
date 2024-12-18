@@ -1,9 +1,9 @@
 package mappers
 
 import (
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/application/dtos"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/domain/entities"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/domain/value_objects"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/application/dtos"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/domain/entities"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/domain/value_objects"
 )
 
 func ToDTOMessage(message *entities.Message) dtos.CreateMessageRequestDTO {

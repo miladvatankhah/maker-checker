@@ -1,19 +1,19 @@
 package main
 
 import (
-	"github.com/miladvatankhah/go-maker-checker/configs"
-	"github.com/miladvatankhah/go-maker-checker/pkg/clients/rabbit"
+	"github.com/miladvatankhah/maker-checker/configs"
+	"github.com/miladvatankhah/maker-checker/pkg/clients/rabbit"
 	"log"
 
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/application/use_cases"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/infrastructure/messaging/rabbitmq"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/infrastructure/persistence/postgres"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/infrastructure/transport/http"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/presentation/http/v1"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/application/use_cases"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/infrastructure/messaging/rabbitmq"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/infrastructure/persistence/postgres"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/infrastructure/transport/http"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/presentation/http/v1"
 
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq" // PostgreSQL driver
-	postgresClient "github.com/miladvatankhah/go-maker-checker/pkg/clients/postgres"
+	postgresClient "github.com/miladvatankhah/maker-checker/pkg/clients/postgres"
 )
 
 func init() {

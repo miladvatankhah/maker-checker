@@ -1,8 +1,8 @@
 package mappers
 
 import (
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/application/dtos"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/domain/aggregates"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/application/dtos"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/domain/aggregates"
 )
 
 func ToDTOUser(user *aggregates.User) dtos.RegisterUserDtoRequest {

@@ -2,7 +2,7 @@ package entities
 
 import (
 	"github.com/google/uuid"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/domain/value_objects"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/domain/value_objects"
 )
 
 type MessageStatus string

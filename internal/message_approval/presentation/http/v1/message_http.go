@@ -2,8 +2,8 @@ package v1
 
 import (
 	"encoding/json"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/application/dtos"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/application/use_cases"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/application/dtos"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/application/use_cases"
 	"net/http"
 )
 

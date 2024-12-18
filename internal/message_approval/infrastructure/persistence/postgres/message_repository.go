@@ -3,7 +3,7 @@ package postgres
 import (
 	"database/sql"
 	_ "github.com/lib/pq" // PostgreSQL driver
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/domain/entities"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/domain/entities"
 )
 
 type MessageRepositoryImpl struct {

@@ -1,9 +1,9 @@
 package use_cases
 
 import (
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/application/dtos"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/application/mappers"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/domain/repositories"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/application/dtos"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/application/mappers"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/domain/repositories"
 )
 
 type RegisterUserUseCase struct {

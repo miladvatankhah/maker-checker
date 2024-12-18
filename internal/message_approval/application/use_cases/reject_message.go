@@ -1,7 +1,7 @@
 package use_cases
 
 import (
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/domain/repositories"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/domain/repositories"
 )
 
 type RejectMessageUseCase struct {

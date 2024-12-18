@@ -2,9 +2,9 @@ package configs
 
 import (
 	"fmt"
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/infrastructure/transport/http"
-	"github.com/miladvatankhah/go-maker-checker/pkg/clients/postgres"
-	"github.com/miladvatankhah/go-maker-checker/pkg/clients/rabbit"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/infrastructure/transport/http"
+	"github.com/miladvatankhah/maker-checker/pkg/clients/postgres"
+	"github.com/miladvatankhah/maker-checker/pkg/clients/rabbit"
 	"github.com/spf13/viper"
 	"os"
 	"strconv"

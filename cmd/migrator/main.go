@@ -4,9 +4,9 @@ import (
 	"errors"
 	"github.com/golang-migrate/migrate/v4"
 	"github.com/joho/godotenv"
-	"github.com/miladvatankhah/go-maker-checker/configs"
-	pg "github.com/miladvatankhah/go-maker-checker/internal/message_approval/infrastructure/persistence/postgres"
-	"github.com/miladvatankhah/go-maker-checker/pkg/clients/postgres"
+	"github.com/miladvatankhah/maker-checker/configs"
+	pg "github.com/miladvatankhah/maker-checker/internal/message_approval/infrastructure/persistence/postgres"
+	"github.com/miladvatankhah/maker-checker/pkg/clients/postgres"
 	"log"
 )
 

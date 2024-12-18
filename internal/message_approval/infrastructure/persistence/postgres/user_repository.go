@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"github.com/google/uuid"
 	_ "github.com/lib/pq" // PostgreSQL driver
-	"github.com/miladvatankhah/go-maker-checker/internal/message_approval/domain/aggregates"
+	"github.com/miladvatankhah/maker-checker/internal/message_approval/domain/aggregates"
 )
 
 type UserRepositoryImpl struct {
