@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  app:
+    restart: always
+    build:
+      context: .
+    environment:
+      - APP_ENV=dev
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=maker_checker
+      - RABBIT_HOST=rabbitmq
+      - RABBIT_PORT=5672
+      - RABBIT_USER=guest
+      - RABBIT_PASSWORD=guest
+      - RABBIT_VHOST=/
+    depends_on:
+      - postgres
+      - rabbitmq
+    networks:
+      - app-network
+    ports:
+      - "3000:3000"
+    command: /wait-for-it.sh rabbitmq:5672 --timeout=60 -- /bin/ap  # Increase timeout to 60 seconds
+
+  migrator:
+    build:
+      context: .
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=maker_checker
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    command: /wait-for-it.sh postgres:5432 --timeout=60 -- /bin/migrator  # Same for migrator
+
+
+  postgres:
+    image: postgres:14.15-alpine3.21
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: maker_checker
+    networks:
+      - app-network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    image: rabbitmq:4.1-rc-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_VHOST: /
+    networks:
+      - app-network
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
