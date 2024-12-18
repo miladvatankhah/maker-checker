@@ -26,7 +26,7 @@ This project implements a simplified version of the maker-checker approval proce
 
 2. Build and run the application using Docker Compose:
     ```sh
-    docker-compose up --build
+    docker-compose --env-file .env.dev up -d
     ```
 
 ## API Endpoints
