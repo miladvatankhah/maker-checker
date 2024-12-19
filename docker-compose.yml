@@ -24,7 +24,7 @@ services:
       - app-network
     ports:
       - "3000:3000"
-    command: /wait-for-it.sh rabbitmq:5672 --timeout=60 -- /bin/ap  # Increase timeout to 60 seconds
+#    command: /wait-for-it.sh rabbitmq:5672 --timeout=60 -- /bin/ap  # Increase timeout to 60 seconds
 
   migrator:
     build:
@@ -39,7 +39,7 @@ services:
       - postgres
     networks:
       - app-network
-    command: /wait-for-it.sh postgres:5432 --timeout=60 -- /bin/migrator  # Same for migrator
+#    command: /wait-for-it.sh postgres:5432 --timeout=60 -- /bin/migrator  # Same for migrator
 
 
   postgres:
